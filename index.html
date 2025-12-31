@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>생일 축하합니다!</title>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <div class="card-wrap">
+    <div class="card">
+      <div class="left">
+        <p class="greet-small">환영합니다</p>
+        <p class="greet-sub">행복을 주는 NH가족은행 입니다.</p>
+        <h1 class="headline">생일 용돈을 원하시면 <span class="highlight">로그인</span> 눌러주세요</h1>
+        <button id="loginBtn" class="login-btn">로그인</button>
+      </div>
+      <div class="right">
+        <div id="emojiFallback" style="font-size:72px; margin-top:8px;">🎉🎂🥳</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: 카드 비밀번호 입력 -->
+  <div id="modal" class="modal-overlay" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <h3 id="modalTitle">카드 비밀번호 입력</h3>
+      <p>힌트: 엄마생일</p>
+      <div class="row">
+        <input id="cardNo" type="text" inputmode="numeric" pattern="[0-9]*" placeholder="카드 비밀번호 4자리" maxlength="4">
+      </div>
+      <div id="result" style="margin-bottom:12px;color:#d33; display:none"></div>
+      <div class="actions">
+        <button id="cancelBtn" class="btn ghost">취소</button>
+        <button id="saveBtn" class="btn primary">확인</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/index.js"></script>
+</body>
+</html>
